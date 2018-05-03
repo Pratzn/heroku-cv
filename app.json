@@ -1,8 +1,8 @@
 {
-  "name": "Start on Heroku: Node.js",
-  "description": "A barebones Node.js app using Express 4",
-  "repository": "https://github.com/heroku/node-js-getting-started",
-  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "name": "Pratz's CV on Heroku: Node.js",
+  "description": "Pratz's CV Node.js app using Express 4",
+  "repository": "https://git.heroku.com/pratz.git",
+  "logo": "https://pratz.herokuapp.com/images/favicon.ico",
   "keywords": ["node", "express", "heroku"],
-  "image": "heroku/nodejs"
+  "image": "https://pratz.herokuapp.com/images/favicon.ico"
 }
