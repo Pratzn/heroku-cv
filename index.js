@@ -20,7 +20,7 @@ const app = express();
   	    });
   	    response.on('end', function() {
 
-  	        console.log('result: '+ body);
+  	        //console.log('result: '+ body);
   	    });
   	});
   }
