@@ -12,16 +12,16 @@ const app = express();
   function reactiveCall(){
   	https.get('https://pratz.herokuapp.com', (response) => {
   		// Continuously update stream with data
-  	    var body = '';
-  	    response.on('data', function(d) {
-  	    	    
-  	        body += d;
-  	       
-  	    });
-  	    response.on('end', function() {
-
-  	        //console.log('result: '+ body);
-  	    });
+          // var body = '';
+          // response.on('data', function(d) {
+  	    	//
+  	     //    body += d;
+  	     //
+          // });
+          // response.on('end', function() {
+          //
+  	     //    //console.log('result: '+ body);
+          // });
   	});
   }
 
