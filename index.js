@@ -7,6 +7,7 @@ const app = express();
 
   app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
   /*---------------------------------------------*/
+  /*
   const https = require('https');
   
   function reactiveCall(){
@@ -25,4 +26,4 @@ const app = express();
   	});
   }
 
-  setInterval(reactiveCall,30000);
+  setInterval(reactiveCall,30000);*/
