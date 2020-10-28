@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+h2,h3,h4,h5,h6,h7 {
+   
+    margin-block-start: 0.33em;
+    margin-block-end: 0.33em;
+  
+    font-weight: bold;
+}
+/* p,li{ */
+/* font-size: 9px; */
+/* } */
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+  
+}
+</style>
+</head>
+<body>
+
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h1>2020</h1>
+      <h4>DataOne</h4>
+      <h5>Application development supervisor</h5>
+      <h6>Aug - Oct</h6>
+      <p><li>Develop and setup NDID node</li></p>
+      <br>
+      <h4>Integration Works asia</h4>
+      <h5>Sr. java developer</h5>
+      <h6>from Dec,2018 to Aug</h6>
+      <p>Onsite SCB, as member of enterprise api scrum team, develop Microservice API</p>
+      <p>Research and develop Octobus IoT platform</p>
+      <li>Integration with Keycloak</li>
+      <li>Integration test with testcontainer</li>
+      <li>MQTT Cluster mosquitto</li>
+      <li>Automate test with cypress</li>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+     <h1>2018</h1>
+      <br>
+      <h4>G-ABLE</h4>
+      <h5>Sr. java developer</h5>
+      <h6>Sep - Nov</h6>
+      <p>Onsite TMB, as Sr. java developer</p>
+      <li>Prompay</li>
+      <li>PPAA</li>
+      <br>
+     
+      <h6>June - Aug</h6>
+      <p>Onsite Set, as Sr. java developer</p>
+      <li>FSCOMP</li>
+      <li>FSC-TAXONOMY</li>
+      <li>Microservice API</li>
+      <li>CI/CD</li>
+      <br>
+      <h4>Ascend</h4>
+      <h5>Sr. java developer</h5>
+      <h6>Jan - April</h6>
+      <p>As developer in scrum team</p>
+      <li>acm-rce-api</li>
+      <li>acm-rce-api-robot</li>
+      <li>acm-tmx-api-auth</li>
+	  <li>acm-tmx-api-auth-acceptor</li>
+     
+     
+     </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h1>2017</h1>
+     <br>
+      <h4>Aware</h4>
+      <h5>Sr. java developer</h5>
+      <h6>Jun - Dec</h6>
+      <p>Onsite KKB, as Sr. java developer</p>
+      <li>New core bank</li>
+      <li>Integrate with Silverlake</li>
+      <br>
+      <h4>Wallenius Wilhelmsen Logistics</h4>
+      <h5>Java developer</h5>     
+      <h6>March,2016 - May</h6>
+      <p>Develop and enhance Java based In-house Enterprise Global applications to support WWL logistic operations on Oracle WebLogic Platform</p>
+       <li>Defines site objectives by analyzing user requirements; envisioning system features and functionality.</li>
+<li>Designs and develops user interfaces to internet/intranet applications by setting expectations and features priorities throughout development life cycle; determining design methodologies and tool sets; completing programming using languages and software products; designing and conducting tests.</li>
+<li>Recommends system solutions by comparing advantages and disadvantages of custom development and purchase alternatives.</li>
+<li>Integrates applications by designing database architecture and server scripting; studying and establishing Connectivity with network systems, search engines, and information servers.</li>
+<li>Completes applications development by coordinating requirements, schedules, and activities; contributing to team meetings; troubleshooting development and production problems across multiple environments and operating platforms.</li>
+<li>Supports users by developing documentation and assistance tools.</li>
+<li>Updates job knowledge by researching new internet/intranet technologies and software products; participating in educational opportunities;</li>
+<li>Enhances organization reputation by accepting ownership for accomplishing new and different requests; exploring opportunities to add value to job accomplishments. reading professional publications; maintaining personal networks; participating in professional organizations.</li>
+<li>Consistently meet or exceed SLAs.</li></div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h1>2016</h1>
+       <br>
+      <h4>GDL</h4>
+      <h5>Sr. java developer</h5>
+      <h6>Sep,2015 - Jan</h6>
+      <p>Onsite The Narcotics Control Board, as Sr. java developer</p>
+      <li>Asset API System with Sencha framework</li>
+      <li>Asset Report</li>
+      <li>ONCB Applications</li>
+      </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h1>2015</h1>
+       <br>
+      <h4>iCONEXT</h4>
+      <h5>Sr. java developer</h5>
+      <h6>Feb,2014 - Aug</h6>
+      <p>Onsite Thai NS solution, as Sr. java developer</p>
+     <li>Develop SMI Travel’s ERP by Spring Framework, Hibernate, Angular, Bootstrap</li>
+<li>Develop TTFL’s ERP with Dukenavire Framework, MyBatis, DBUnit, JUnit</li>
+<li>Customize PricingDB for DENSO by RAD, Websphere, Spring framework, Apache tile</li>
+<li>Design & Develop Manpower for internal by Spring framework, Jquery</li>
+<li>Design & Develop CI/CD Server with Hudson, Jenkin</li>
+      </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h1>2013</h1>
+       <br>
+      <h4>K & O System and Consulting</h4>
+      <h5>Sr. java developer</h5>
+      <h6>Jan,2012 - Dec</h6>
+      <p>R & D Alfresco Cluster aotu failover for Ocean life insurance</p>
+     <li>Implement HA-cluster postgreSQL stream replication for Ocean Life Insurance (www.ocean.co.th)</li>
+<li>Implement HA-cluster enterprise content management systems for Ocean Life Insurance (www.ocean.co.th)</li>
+<li>Web report for Ocean Life Insurance (www.ocean.co.th)</li>
+<li>Design & develop digital signage</li>
+<li>Design & develop NFC technology</li>
+<li>Design & develop human resource systems by OrangeHRM</li>
+<li>Design & develop time attendance</li>
+<li>Design & develop responsive web application</li>
+<li>Design & develop CRM by VtigerCRM</li>
+<li>Design & develop workflow by JBPM</li>
+<li>Manage Sixjar IOS7 application project (free app on appstore)</li>
+<li>Manage Kino android application project (free app on playstore)</li>   </div>
+  </div>
+   <div class="container left">
+    <div class="content">
+      <h1>2011</h1>
+       <br>
+      <h4>KMUTT</h4>
+      <h5>java developer</h5>
+      <h6>Apr,2007 - March</h6>
+      <p>R & D Java technology, team built</p>
+      <li>Responsibility for the feasibility study on the mixed environments of platforms (java and .net)</li>
+<li>ava prototype development</li>
+<li>VB.NET prototype development</li>
+<li>Responsibility for the feasibility study on SOA with web service</li>
+<li>Research about web services security (ws-security)</li>
+<li>Design & develop Single sign-on to Kmutt's intranet</li>
+<li>Research about variety of Apache project</li>
+<li>Design & develop Centralized log according to the act of legislation</li>
+<li>Design & develop instrument system in software engineering</li>
+<li>Research about mobile web application</li>
+      </div>
+  </div>
+</div>
+
+</body>
+</html>
