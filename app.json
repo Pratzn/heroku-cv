@@ -4,5 +4,6 @@
   "repository": "https://git.heroku.com/pratz.git",
   "logo": "https://pratz.herokuapp.com/images/favicon.ico",
   "keywords": ["node", "express", "heroku"],
-  "image": "https://pratz.herokuapp.com/images/favicon.ico"
+  "image": "https://pratz.herokuapp.com/images/favicon.ico",
+  "stack": "heroku-22"
 }
